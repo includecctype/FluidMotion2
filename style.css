@@ -1,0 +1,44 @@
+body
+{
+    background-color: black;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+div
+{
+    position:relative;
+}
+
+div p
+{
+    position:absolute;
+    font-size: 6em;
+    transform: translate(-50%, -140%)
+}
+
+div p:nth-child(1)
+{
+    color: aqua;
+    animation: fluid 4s ease-in-out infinite;
+}
+
+div p:nth-child(2)
+{
+    color:transparent;
+    -webkit-text-stroke: 3px blue;
+}
+
+@keyframes fluid
+{
+    0%,100%
+    {
+        clip-path: polygon(0% 100%, 0% 65%, 11% 57%, 25% 51%, 40% 52%, 53% 57%, 69% 64%, 85% 68%, 100% 65%, 100% 100%);
+    }
+    50% 
+    {
+        clip-path: polygon(0% 100%, 0 50%, 10% 59%, 22% 65%, 37% 67%, 53% 62%, 69% 55%, 84% 51%, 100% 49%, 100% 100%);
+    }
+}
